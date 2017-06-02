@@ -1,4 +1,4 @@
-<% provide(:title, "Edit user") %>
+<% provide(:title, "Редактирование пользователя") %>
 <h1>Update your profile</h1>
 
 <div class="row">
@@ -15,10 +15,10 @@
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.label :password_confirmation, "Confirm Password" %>
+      <%= f.label :password_confirmation, "Подтверждение пароля" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.submit "Save changes", class: "btn btn-primary" %>
+      <%= f.submit "Сохранить изменения", class: "btn btn-primary" %>
     <% end %>
 
     <div class="gravatar_edit">
