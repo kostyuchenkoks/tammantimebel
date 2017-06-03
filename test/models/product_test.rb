@@ -53,6 +53,7 @@ class ProductTest < ActiveSupport::TestCase
     end
   end
 
+  # если у товара нет уникального названия, то он недопустим
   test "product is not valid without a unique title" do
     product = Product.new(title:       products(:ruby).title,
                           description: "yyy", 
