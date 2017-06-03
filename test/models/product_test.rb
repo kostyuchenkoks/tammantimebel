@@ -62,6 +62,7 @@ class ProductTest < ActiveSupport::TestCase
 
     assert product.invalid?
     assert_equal ["has already been taken"], product.errors[:title]
+                  #уже был использован
   end
 
   test "product is not valid without a unique title - i18n" do
