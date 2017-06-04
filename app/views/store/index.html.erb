@@ -3,20 +3,34 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
-<h1>Your Pragmatic Catalog</h1>
-
-<% cache ['store', Product.latest] do %>
-  <% @products.each do |product| %>
-    <% cache ['entry', product] do %>
-      <div class="entry">
-        <%= image_tag(product.image_url) %>
-        <h3><%= product.title %></h3>
-        <%= sanitize(product.description) %>
-        <div class="price_line">
-          <span class="price"><%= number_to_currency(product.price) %></span>
-          <%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true %>
+<div id="col-lg-8 col-lg-offset-1 col-md-10 col-sm-12 col-xs-12">
+  <% @products.each_slice(4) do |product| %>
+    <div class="row">
+      <% product.each do |product| %>
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 item-container">
+          <table>
+            <tr>
+              <td colspan = "2" class = "item-table"><%= image_tag(product.image_url) %></td>
+            </tr>
+            <tr>
+              <td class = "item-table text-g14 item-table-td"><%= product.title %></td>
+              <td rowspan = "2" class = "item-table center-content">
+                <a href = "#">
+                  <i class="fa fa-cart-arrow-down fa-2x text-g"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class = "item-table text-g14 item-table-td">Размер: 100x100 см</td>
+            </tr>
+            <tr>
+              <td colspan = "2" class = "text-price"><%= number_to_currency(product.price) %></td>
+            </tr>
+          </table>
+          <%= link_to 'Read_more', product_path(product), class:'btn btn-primary', style:'min-width:200px' %>
+          <%= button_to 'Добавить в корзину', line_items_path(product_id: product), remote: true , class:'btn btn-primary', style:'min-width:200px' %>
         </div>
-      </div>
-    <% end %>
+      <% end %> 
+    </div>
   <% end %>
-<% end %>
+</div>                  

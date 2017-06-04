@@ -1,25 +1,128 @@
 <% provide(:title, 'Просмотр товара') %>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
+<item>
+  <br>
+  <div class = "container">
+    <div class = "row">
+      <!--БОЛЬШОЕ ИЗОБРАЖЕНИЕ-->
+      <!--БОЛЬШОЕ ИЗОБРАЖЕНИЕ-->
+      <!--БОЛЬШОЕ ИЗОБРАЖЕНИЕ-->
+      <div class = "col-lg-5 col-sm-5 col-xs-9 col-lg-offset-1" style = "padding-right:20px;">
+          <%= image_tag(@product.image_url) %>
+      </div>
+      <!--ИНФОРМАЦИЯ/ЗАКАЗАТЬ-->
+      <!--ИНФОРМАЦИЯ/ЗАКАЗАТЬ-->
+      <!--ИНФОРМАЦИЯ/ЗАКАЗАТЬ-->
+      <div class="details col-md-6">
+      <h3 class="product-title"><%= @product.title %></h3>
+      <div class="rating">
+        <div class="stars">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star non-checked"></span>
+        </div>
+      </div>
+      <p class="product-description">Классное кресло мешок для практичных натур! Прочная и невероятно практичная ткань (100% нейлон) расширяет границы использования кресла Студент.</p>
+      <h4 class="price">Цена: <span><%= @product.price %> руб.</span></h4>
+      <h5 class="colors">Расцветки:
+        <span class="color orange not-available" data-toggle="tooltip" title="Нет в наличии"></span>
+        <span class="color green"></span>
+        <span class="color blue"></span>
+      </h5>
+              <br>
+      <div class="action">
+        <%= button_to 'Добавить в корзину', line_items_path(product_id: @product), remote: true , class:'btn btn-danger', style:'min-width:200px' %>
+      </div>
+    </div>
+      </div>
+      <br>    
+        <div class="col-md-12 product-info">
+          <ul id="myTab" class="nav nav-tabs nav_tabs">
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+              <li class="active"><a href="#service-one" data-toggle="tab">Описание товара</a></li>
+              <li><a href="#service-two" data-toggle="tab">Отзывы</a></li>
+              <li><a href="#service-three" data-toggle="tab">Комментарии</a></li>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+          </ul>
+      <div id="myTabContent" class="tab-content">
+      <div class="tab-pane fade in active" id="service-one">
+        <section class="container product-info">
+          <p class = "text-g18"><%= @product.description %></p>
+          <br>
+          <table style = "max-width:600px;">
+              <tr>
+                  <td class = "info-table-left">Размер</td>
+                  <td class = "info-table-left">100x100 cм.</td>
+              </tr>
+              <tr>
+                  <td class = "info-table-left">Нагрузка max</td>
+                  <td class = "info-table-left">120 кг.</td>
+              </tr>
+              <tr>
+                  <td class = "info-table-left">Вес</td>
+                  <td class = "info-table-left">3,5 кг.</td>
+              </tr>
+              <tr>
+                  <td class = "info-table-left">Внутренний чехол</td>
+                  <td class = "info-table-left">Клапан защитный</td>
+              </tr>
+              <tr>
+                  <td class = "info-table-left">Внешний чехол</td>
+                  <td class = "info-table-left">Нейлон 100%</td>
+              </tr>
+              <tr>
+                  <td class = "info-table-left">Наполнитель</td>
+                  <td class = "info-table-left">Полистерол</td>
+              </tr>
+          </table>
+        </section>  
+      </div>
+    <div class="tab-pane fade" id="service-two">
+      
+      <section class="col-lg-7 col-md-7 col-sm-8 col-xs-12">
+        <table style = "margin-top:15px;">
+          <tr>
+            <td class = "text-g16 review-name">Ирина Сергеева</td>
+            <td class = "text-g16 review-date">28.05.2017</td>
+          </tr>
+          <tr>
+            <td colspan = "2" class = "text-g14 review-stars-left">
+              <i class = "fa fa-star text-g14"></i>
+              <i class = "fa fa-star text-g14"></i>
+              <i class = "fa fa-star text-g14"></i>
+              <i class = "fa fa-star text-g14"></i>
+              <i class = "fa fa-star text-g14 non-checked"></i>
+            </td>
+          </tr>
+          <tr>
+            <td colspan = "2" class = "text-g16 review-content">Спасибо за замечательное кресло! Не совсем то, что ожидалось, но детям очень понравилось!</td>
+          </tr>
+        </table>
+        <p class = "text-g18">Оставить отзыв:</p>
+        <textarea class="form-control" rows="3"></textarea>
+        <br>
+        <p class = "text-g18">Ваша оценка:</p>
+        <i class = "fa fa-star text-sg14"></i><i class = "fa fa-star text-sg14"></i><i class = "fa fa-star text-sg14"></i><i class = "fa fa-star text-sg14"></i><i class = "fa fa-star text-sg14"></i>
+        <br>
+        <br>
+        <button type = "button" class = "btn btn-danger btn-block">Оставить отзыв</button>
+        <br>
+      </section>
+      
+    </div>
+    <div class="tab-pane fade" id="service-three">
+                  
+    </div>
+  </div>
+      </div>
+  </div>
+</item>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+
+
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
