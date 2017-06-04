@@ -1,6 +1,7 @@
 class AccountActivationsController < ApplicationController
   
   def edit
+    @cart = Cart.find_by!(params[:id])
     user = User.find_by(email: params[:email])
     if user && !user.activated? && user.authenticated?(:activation, params[:id])
       user.activate

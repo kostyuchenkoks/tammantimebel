@@ -39,20 +39,20 @@
                             <div class = "row">
                                 <div class = "col-sm-12 hidden-lg hidden-md hidden-xs margin10"></div>
                             </div>
-                            <a href = "#">
+                            <a href = <%= cart_path(@cart) %>>
                                 <div class = "container bag-container img-responsive">
                                     <table class= "bag-table">
                                         <tr>
                                             <th rowspan="3" class = "bag-table-icon"><i class="fa fa-shopping-cart fa-2x text-g"></i></th>
-                                            <th class = "text-g14 bag-table-th"> КОРЗИНА</th>
+                                            <th class = "text-g14 bag-table-th">КОРЗИНА</th>
                                         </tr>
                                         <tr>
                                             <td class = "text-g14 bag-table-td">Товаров:</td>
-                                            <td class = "text-g14 bag-table-td">0</td>
+                                            <td class = "text-g14 bag-table-td"><%= (@cart.total_items) %></td>
                                         </tr>
                                         <tr>
                                             <td class = "text-g14 bag-table-td">На сумму:</td>
-                                            <td class = "text-g14 bag-table-td">0</td>
+                                            <td class = "text-g14 bag-table-td"><%= number_to_currency(@cart.total_price) %></td>
                                         </tr>
                                     </table>
                                 </div>

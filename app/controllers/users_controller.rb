@@ -5,17 +5,21 @@ class UsersController < ApplicationController
 
   def index
     @users = User.paginate(page: params[:page])
+    @cart = Cart.find_by!(params[:id])
   end
 
   def show
   	@user = User.find(params[:id])
+    @cart = Cart.find_by!(params[:id])
   end
 
   def new
   	@user = User.new
+    @cart = Cart.find_by!(params[:id])
   end
 
   def create
+    @cart = Cart.find_by!(params[:id])
     @user = User.new(user_params)
     if @user.save
       @user.send_activation_email
@@ -27,9 +31,11 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @cart = Cart.find_by!(params[:id])
   end
 
   def update
+    @cart = Cart.find_by!(params[:id])
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
       redirect_to @user

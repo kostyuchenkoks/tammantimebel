@@ -1,8 +1,10 @@
 class SessionsController < ApplicationController
   def new
+    @cart = Cart.find_by!(params[:id])
   end
 
   def create
+    @cart = Cart.find_by!(params[:id])
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       if user.activated?
