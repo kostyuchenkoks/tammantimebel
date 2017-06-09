@@ -6,44 +6,52 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
+    @cart = Cart.find_by!(params[:id])
     @orders = Order.all
   end
 
   # GET /orders/1
   # GET /orders/1.json
   def show
+    @cart = Cart.find_by!(params[:id])
   end
 
   # GET /orders/new
   def new
     if @cart.line_items.empty?
-      redirect_to store_url, notice: "Your cart is empty"
+      redirect_to catalog_url, notice: "Your cart is empty"
       return
     end    
-
+    @cart = Cart.find_by!(params[:id])
     @order = Order.new
   end
 
   # GET /orders/1/edit
   def edit
+    @cart = Cart.find_by!(params[:id])
   end
 
   # POST /orders
   # POST /orders.json
   def create
     @order = Order.new(order_params)
+    @order.add_line_items_from_cart(@cart)
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
-        format.json { render :show, status: :created, location: @order }
+        Cart.destroy(session[:cart_id])
+        session[:cart_id] = nil    
+        format.html { redirect_to catalog_url, notice: 
+          'Thank you for your order.' }
+        format.json { render action: 'show', status: :created,
+          location: @order }      
       else
-        format.html { render :new }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
+        format.html { render action: 'new' }
+        format.json { render json: @order.errors,
+          status: :unprocessable_entity }
       end
     end
   end
-
   # PATCH/PUT /orders/1
   # PATCH/PUT /orders/1.json
   def update
