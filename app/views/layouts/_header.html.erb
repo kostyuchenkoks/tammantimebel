@@ -1,66 +1,76 @@
-    <header>
-        <div class = "container-fluid">
-            <div class = "row head-container">
-                <div class = "col-lg-4 col-md-4">
-                  <div class = "img-responsive center-content logo">
-                  <%= link_to image_tag("logo.png", alt: "Tamm logo"), root_path %>
-                  </div>
-                </div>
-                <div class = "col-lg-4 col-md-4">
-                    <h1 class = "text-phone center-content">8 (952) 621 78 86</h1>
-                    <div class = "row center-content">
-                        <div class="col-sm-3 hidden-lg hidden-md"></div>
-                        <div class = "col-lg-6 col-md-6 col-sm-3">
-                            <a href = "#" class = "btn btn-sky btn-head">ЗАКАЗАТЬ ЗВОНОК</a>
-                        </div>
-                        <div class = "col-lg-6 col-md-6 col-sm-3">
-                            <a href = "#" class = "btn btn-sky btn-head">НАПИСАТЬ НАМ</a>
-                        </div>
-                        <div class="col-sm-3 hidden-lg hidden-md"></div>
+<header>
+    <div class = "container-fluid">
+        <div class = "row head-container">
+            <div class = "col-lg-4 col-md-4">
+              <div class = "img-responsive center-content logo">
+              <%= link_to image_tag("logo.png", alt: "Tamm logo"), root_path %>
+              </div>
+            </div>
+            <div class = "col-lg-4 col-md-4">
+                <h1 class = "text-phone center-content">8 (952) 621 78 86</h1>
+                <div class = "row center-content">
+                    <div class="col-sm-3 hidden-lg hidden-md"></div>
+                    <div class = "col-lg-6 col-md-6 col-sm-3">
+                        <a href = "#" class = "btn btn-sky btn-head">ЗАКАЗАТЬ ЗВОНОК</a>
                     </div>
-                </div>
-                <div class = "col-lg-4 col-md-4">
-                    <div class = "row center-content">
-                        <div class = "col-sm-3 hidden-lg hidden-md"></div>
-                        <div class = "col-lg-5 col-md-5 col-sm-2">
-                            <div class = "row">
-                                <div class = "col-lg-12 col-md-12 hidden-sm hidden-xs margin20"></div>
-                                <div class = "hidden-lg hidden-md col-sm-12 hidden-xs margin30"></div>
-                            </div>
-                            <div class = "container login-container">
-                            <button class = "empty" type = "button" data-toggle = "modal" data-target = "#modal-login">
-                                <ul class="fa-ul">
-                                       <li class = "text-g16"><i class = "fa-li fa fa-key fa-lg text-g16"></i>ВОЙТИ</li>
-                                 </ul>
-                            </button>
-                            </div>
-                        </div>
-                        <div class = "col-lg-7 col-md-7 col-sm-5">
-                            <div class = "row">
-                                <div class = "col-sm-12 hidden-lg hidden-md hidden-xs margin10"></div>
-                            </div>
-                            <a href = <%= cart_path(@cart) %>>
-                                <div class = "container bag-container img-responsive">
-                                    <table class= "bag-table">
-                                        <tr>
-                                            <th rowspan="3" class = "bag-table-icon"><i class="fa fa-shopping-cart fa-2x text-g"></i></th>
-                                            <th class = "text-g14 bag-table-th">КОРЗИНА</th>
-                                        </tr>
-                                        <tr>
-                                            <td class = "text-g14 bag-table-td">Товаров:</td>
-                                            <td class = "text-g14 bag-table-td"><%= (@cart.total_items) %></td>
-                                        </tr>
-                                        <tr>
-                                            <td class = "text-g14 bag-table-td">На сумму:</td>
-                                            <td class = "text-g14 bag-table-td"><%= number_to_currency(@cart.total_price) %></td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </a>
-                        </div>
-                        <div class = "col-sm-2 hidden-lg hidden-md"></div>
+                    <div class = "col-lg-6 col-md-6 col-sm-3">
+                        <a href = "#" class = "btn btn-sky btn-head">НАПИСАТЬ НАМ</a>
                     </div>
+                    <div class="col-sm-3 hidden-lg hidden-md"></div>
+                </div>
+            </div>
+            <div class = "col-lg-4 col-md-4">
+                <div class = "row center-content">
+                    <div class = "col-sm-3 hidden-lg hidden-md"></div>
+                    <div class = "col-lg-5 col-md-5 col-sm-2">
+                        <div class = "row">
+                            <div class = "col-lg-12 col-md-12 hidden-sm hidden-xs margin20"></div>
+                            <div class = "hidden-lg hidden-md col-sm-12 hidden-xs margin30"></div>
+                        </div>
+                        <div class = "container login-container">
+                        <button class = "empty" type = "button" data-toggle = "modal" data-target = "#modal-login">
+                            <ul class="fa-ul">
+                                   <li class = "text-g16"><i class = "fa-li fa fa-key fa-lg text-g16"></i>ВОЙТИ</li>
+                             </ul>
+                        </button>
+                        </div>
+                    </div>
+                    <div class = "col-lg-7 col-md-7 col-sm-5">
+                        <div class = "row">
+                            <div class = "col-sm-12 hidden-lg hidden-md hidden-xs margin10"></div>
+                        </div>
+                        <a href = <%= cart_path(@cart) %>>
+                            <div class = "container bag-container img-responsive">
+                                <table class= "bag-table">
+                                    <tr>
+                                        <th rowspan="3" class = "bag-table-icon"><i class="fa fa-shopping-cart fa-2x text-g"></i></th>
+                                        <th class = "text-g14 bag-table-th">КОРЗИНА</th>
+                                    </tr>
+                                    <tr>
+                                        <td class = "text-g14 bag-table-td">Товаров:</td>                                        
+                                            <% if @cart %>
+                                                <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>                   
+                                                    <td class = "text-g14 bag-table-td"><%= (@cart.total_items) %></td>
+                                                <% end %>                                       
+                                            <% end %>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class = "text-g14 bag-table-td">На сумму:</td>                                       
+                                            <% if @cart %>
+                                                <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+                                                    <td class = "text-g14 bag-table-td"><%= number_to_currency(@cart.total_price) %></td>
+                                                <% end %>                                                                    
+                                            <% end %>       
+                                        </td>                                            
+                                    </tr>
+                                </table>
+                            </div>
+                        </a>
+                    </div>
+                    <div class = "col-sm-2 hidden-lg hidden-md"></div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+</header>
