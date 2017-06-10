@@ -122,7 +122,6 @@
 </item>
 
 
-
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<% if current_user && current_user.admin? %>
+  <%= link_to 'Редакторивать', edit_product_path(@product) %>
+<% end %>

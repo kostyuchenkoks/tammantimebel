@@ -1,10 +1,204 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="span4">
-    <section>
-      <h1>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
-</div>
+<lk>
+  <div class = "container" style = "margin-top:20px;">
+    <div class="row profile">
+      <div class="col-md-3 col-sm-12 col-xs-12" style = "padding:0px;">
+        <div class="profile-sidebar">
+            <div class="profile-usermenu">
+              <ul class="nav">
+                <li class = "active">
+                  <a href= <%= @current_user %> >
+                  <i class="fa fa-user"></i>
+                  Профиль </a>
+                </li>
+                <li>
+                  <a href="#">
+                  <i class="fa fa-list"></i>
+                  Мои заказы </a>
+                </li>
+                <li>
+                  <a href= <%= edit_user_path(current_user) %>>
+                  <i class="fa fa-cog"></i>
+                  Настройки аккаунта </a>
+                </li>
+                <li>
+                  <%= link_to "Выход" , logout_path, method: "delete" %>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </div>
+        <!--ПРОФИЛЬ-->
+        <!--ПРОФИЛЬ-->
+        <!--ПРОФИЛЬ-->
+        <div class="col-md-9 col-sm-12 col-xs-12" style="padding:0px;">
+            <div class="profile-content">
+                <!--ЛИЧНАЯ ИНФОРМАЦИЯ-->
+                <!--ЛИЧНАЯ ИНФОРМАЦИЯ-->
+                <!--ЛИЧНАЯ ИНФОРМАЦИЯ-->
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                      <div class = "row" style = "padding: 0 20px 0 10px">
+                        Личная информация
+                         <a href="javascript:showhide('profile-inf-show', 'profile-inf-change')">
+                            <i class="fa fa-pencil pull-right"></i>
+                        </a>
+                        </div>
+                    </div>
+                      <div class="panel-body" id = "profile-inf-show">
+                        <form class="form-horizontal" role="form">
+                          <div class="form-group">
+                              <label class="col-lg-2 control-label">Фамилия:</label>
+                              <div class="col-lg-10" style="padding-top:7px;">
+                                Иванов
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-lg-2 control-label">Имя:</label>
+                              <div class="col-lg-10" style="padding-top:7px;">
+                                <%= @user.name %>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-lg-2 control-label">Отчество:</label>
+                              <div class="col-lg-10" style="padding-top:7px;">
+                                Иванович
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-lg-2 control-label">Emal:</label>
+                              <div class="col-lg-10" style="padding-top:7px;">
+                                ivanovivan@mail.ru
+                              </div>
+                            </div>
+                          </form>
+                      </div>
+                      <div class="panel-body" id = "profile-inf-change" style = "display:none;">
+                          <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                              <label class="col-lg-2 control-label">Фамилия:</label>
+                              <div class="col-lg-10">
+                                <input class="form-control" value="Фамилия" type="text">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-lg-2 control-label">Имя:</label>
+                              <div class="col-lg-10">
+                                <input class="form-control" value="Имя" type="text">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-lg-2 control-label">Отчество:</label>
+                              <div class="col-lg-10">
+                                <input class="form-control" value="Отчество" type="text">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-lg-2 control-label">Email:</label>
+                              <div class="col-lg-10">
+                                <input class="form-control" value="example@mail.ru" type="text">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="pull-right" style= "padding-left:15px;padding-right:15px;">
+                                <input class="btn btn-sky" value="Сохранить изменения" type="button">
+                                <span></span>
+                                <input class="btn btn-default" value="Отменить" type="reset">
+                              </div>
+                            </div>
+                          </form>
+
+                      </div>
+                </div>
+                <!--КОНТАКТНАЯ ИНФОРМАЦИЯ-->
+                <!--КОНТАКТНАЯ ИНФОРМАЦИЯ-->
+                <!--КОНТАКТНАЯ ИНФОРМАЦИЯ-->
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                      <div class = "row" style = "padding: 0 20px 0 10px">
+                        Контактная информация
+                         <a href="javascript:showhide('contacts-inf-show', 'contacts-inf-change')">
+                            <i class="fa fa-pencil pull-right"></i>
+                        </a>
+                        </div>
+                    </div>
+                      <div class="panel-body" id = "contacts-inf-show">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                              <label class="col-lg-2 control-label">Телефон:</label>
+                              <div class="col-lg-10" style="padding-top:7px;">
+                                89834758345
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-lg-2 control-label">Город:</label>
+                              <div class="col-lg-10" style="padding-top:7px;">
+                                Томск
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-lg-2 control-label">Адрес:</label>
+                              <div class="col-lg-10" style="padding-top:7px;">
+                                пр.Ленина, д.28, кв.15
+                              </div>
+                            </div>
+                          </form>
+                      </div>
+                      <div class="panel-body" id = "contacts-inf-change" style = "display:none;">
+                          <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                              <label class="col-lg-2 control-label">Телефон:</label>
+                              <div class="col-lg-10">
+                                <input class="form-control" value="Номер телефона" type="text">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-lg-2 control-label">Город:</label>
+                              <div class="col-lg-10">
+                                <input class="form-control" value="Город" type="text">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-lg-2 control-label">Адрес:</label>
+                              <div class="col-lg-10">
+                                <input class="form-control" value="Ул/пер/пр, дом, кв." type="text">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-lg-2 control-label">Индекс:</label>
+                              <div class="col-lg-10">
+                                <input class="form-control" value="Почтовый индекс" type="text">
+                              </div>
+                            </div>
+                              <div class="form-group">
+                              <div class="pull-right" style= "padding-left:15px;padding-right:15px;">
+                                <input class="btn btn-sky" value="Сохранить изменения" type="button">
+                                <span></span>
+                                <input class="btn btn-default" value="Отменить" type="reset">
+                              </div>
+                            </div>
+                          </form>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    function showhide(id_hide, id_show) {
+        var e = document.getElementById(id_hide);
+        var s = document.getElementById(id_show);
+        if (e.style.display === 'none') 
+        {
+            e.style.display = 'block';
+            s.style.display = 'none';
+        } 
+        else 
+        {
+            e.style.display = 'none';
+            s.style.display = 'block';
+        }
+     }
+  </script>
+</lk>
