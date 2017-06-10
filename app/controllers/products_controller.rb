@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  include CurrentCart
+  before_action :set_cart
 
   # GET /products
   # GET /products.json
@@ -10,7 +12,6 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    @cart = Cart.find_by!(params[:id])
   end
 
   # GET /products/new

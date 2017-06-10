@@ -2,13 +2,13 @@ class PasswordResetsController < ApplicationController
   before_action :get_user,   only: [:edit, :update]
   before_action :valid_user, only: [:edit, :update]
   before_action :check_expiration, only: [:edit, :update]
+  include CurrentCart
+  before_action :set_cart
 
   def new
-    @cart = Cart.find_by!(params[:id])
   end
 
   def create
-    @cart = Cart.find_by!(params[:id])
     @user = User.find_by(email: params[:password_reset][:email].downcase)
     if @user
       @user.create_reset_digest
@@ -22,11 +22,9 @@ class PasswordResetsController < ApplicationController
   end
 
   def edit
-    @cart = Cart.find_by!(params[:id])
   end
 
   def update
-    @cart = Cart.find_by!(params[:id])
     if password_blank?
       flash.now[:danger] = "Password can't be blank"
       render 'edit'

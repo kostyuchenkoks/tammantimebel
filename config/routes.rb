@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
 
   get 'catalog' => 'store#index'
+  get 'orders' => 'orders#index'
+  get 'products' => 'products#index'
   get 'password_resets/new'
   get 'password_resets/edit'
   

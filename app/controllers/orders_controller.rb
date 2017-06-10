@@ -1,19 +1,17 @@
 class OrdersController < ApplicationController
   include CurrentCart
-  before_action :set_cart, only: [:new, :create]
+  before_action :set_cart 
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   # GET /orders
   # GET /orders.json
   def index
-    @cart = Cart.find_by!(params[:id])
     @orders = Order.all
   end
 
   # GET /orders/1
   # GET /orders/1.json
   def show
-    @cart = Cart.find_by!(params[:id])
   end
 
   # GET /orders/new
@@ -22,13 +20,11 @@ class OrdersController < ApplicationController
       redirect_to catalog_url, notice: "Your cart is empty"
       return
     end    
-    @cart = Cart.find_by!(params[:id])
     @order = Order.new
   end
 
   # GET /orders/1/edit
   def edit
-    @cart = Cart.find_by!(params[:id])
   end
 
   # POST /orders

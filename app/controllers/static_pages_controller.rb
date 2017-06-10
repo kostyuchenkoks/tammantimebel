@@ -1,19 +1,17 @@
 class StaticPagesController < ApplicationController
+  include CurrentCart
+  before_action :set_cart
   
   def home
-    @cart = Cart.find_by!(params[:id])
   end
 
   def help
-    @cart = Cart.find_by!(params[:id])
   end
 
   def about
-    @cart = Cart.find_by!(params[:id])
   end
 
   def contact
-    @cart = Cart.find_by!(params[:id])
   end
 
 end

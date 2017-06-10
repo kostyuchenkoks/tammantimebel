@@ -22,8 +22,12 @@
                         </ul>
                         <nav>
                             <ul class="nav navbar-nav navbar-right">
-                                <% if logged_in? %>
+                                <% if current_user && current_user.admin? %>
                                     <li><%= link_to "Пользователи", users_path %></li>
+                                    <li><%= link_to "Заказы", orders_path %></li>
+                                    <li><%= link_to "Товары", products_path %></li>
+                                <% end %>
+                                <% if logged_in? %>                                   
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                             Профиль <b class="caret"></b>
