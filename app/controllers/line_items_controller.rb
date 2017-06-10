@@ -2,6 +2,7 @@ class LineItemsController < ApplicationController
   include CurrentCart
   before_action :set_cart
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
+  before_action :admin_user
 
   # GET /line_items
   # GET /line_items.json
@@ -75,5 +76,12 @@ class LineItemsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def line_item_params
       params.require(:line_item).permit(:product_id)
+    end
+
+    # Подтверждает наличие административных привилегий.
+    def admin_user
+      unless logged_in? && current_user.admin?
+        redirect_to(root_url)
+      end 
     end
 end
