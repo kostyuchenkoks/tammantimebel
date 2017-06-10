@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    @cart = Cart.find_by!(params[:id])
     @products = Product.all
   end
 
@@ -15,16 +16,19 @@ class ProductsController < ApplicationController
 
   # GET /products/new
   def new
+    @cart = Cart.find_by!(params[:id])
     @product = Product.new
   end
 
   # GET /products/1/edit
   def edit
+    @cart = Cart.find_by!(params[:id])
   end
 
   # POST /products
   # POST /products.json
   def create
+    @cart = Cart.find_by!(params[:id])
     @product = Product.new(product_params)
 
     respond_to do |format|
