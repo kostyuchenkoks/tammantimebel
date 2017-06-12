@@ -1,0 +1,766 @@
+/*---------------------------------------- Общие ----------------------------------------*/
+
+body
+{
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+.center-content 
+{ 
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: center;
+}
+a:hover
+{
+    text-decoration: none;
+}
+.margin30
+{
+    height: 30px;
+}
+.margin20
+{
+    height: 20px;
+}
+.margin10
+{
+    height: 10px;
+}
+
+.empty, 
+.empty:hover, 
+.empty:active, 
+.empty:focus,
+.empty:active:focus,
+.empty.active:focus,
+.empty:active:hover,
+.empty.active:hover,
+.empty.active:focus,
+.empty.active.focus
+{
+    background: none;
+    border: none;
+}
+button:active, button:focus {
+  outline: none !important;
+}
+button::-moz-focus-inner {
+  border: 0 !important;
+}
+.color-vk
+{
+    color: #507299;
+}
+.color-fb
+{
+    color: #4867aa;
+}
+.color-ok
+{
+    color: #f58220;
+}
+.color-gp
+{
+    color: #db4437;
+}
+/*---------------------------------------- Общие ----------------------------------------*/
+
+/*---------------------------------------- Текст ----------------------------------------*/
+.text-phone
+{
+    font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 24px;
+    color: #7f7f7f;
+    margin-top: 0px;
+}
+.text-g18
+{
+    font-size: 18px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 18px;
+    color: #7f7f7f;
+    margin-top: 0px;
+}
+.text-g16
+{
+    font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 16px;
+    color: #7f7f7f;
+    margin-top: 0px;
+}
+.text-g14
+{
+    font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 14px;
+    color: #7f7f7f;
+    margin-top: 0px;
+}
+.text-sg14
+{
+    font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 14px;
+    color: #f2f2f2;
+    margin-top: 0px;
+}
+.text-g
+{
+    color: #7f7f7f;
+}
+.text-l
+{
+    color: #29abe2;
+}
+/*---------------------------------------- Текст -----------------------------------------*/
+
+/*---------------------------------------- Header ----------------------------------------*/
+.head-container
+{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.logo
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.btn-head
+{
+    width: 140px;
+    margin-top: 10px;
+}
+.bag-container
+{
+    border: 1px solid #cecece;
+    background: #fff;
+    padding: 10px;
+    height: 80px;
+    width: 210px;
+}
+.bag-table
+{
+    border-collapse: collapse; 
+    line-height: 1;
+}
+.bag-table-icon 
+{
+    padding-top: 18px;
+    padding-left: 0px;
+}
+.bag-table-th
+{
+    padding-left: 10px;
+    padding-bottom: 5px;
+    text-align: left;
+    text-decoration:none;
+}
+.bag-table-td 
+{
+    padding-left: 10px;
+    text-align: left;
+    text-decoration:none;
+}
+.login-container
+{
+    height: auto;
+    width: 100px;
+    padding-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+/*---------------------------------------- Header ----------------------------------------*/
+ 
+/*----------------------------------- Лазурная кнопка ------------------------------------*/
+.btn-sky {
+    color: #fff;
+    background-color: #29abe2;
+    border-color: #29abe2;
+}
+.btn-sky:focus,
+.btn-sky.focus {
+  color: #fff;
+  background-color: #0094ff;
+  border-color: #0094ff;
+}
+.btn-sky:hover {
+  color: #fff;
+  background-color: #0094ff;
+  border-color: #0094ff;
+}
+.btn-sky:active,
+.btn-sky.active,
+.open > .dropdown-toggle.btn-sky {
+  color: #fff;
+  background-color: #0094ff;
+  border-color: #0094ff;
+}
+.btn-sky:active:hover,
+.btn-sky.active:hover,
+.open > .dropdown-toggle.btn-sky:hover,
+.btn-sky:active:focus,
+.btn-sky.active:focus,
+.open > .dropdown-toggle.btn-sky:focus,
+.btn-sky:active.focus,
+.btn-sky.active.focus,
+.open > .dropdown-toggle.sky.focus {
+  color: #fff;
+  background-color: #0074c8;
+  border-color: #0074c8;
+}
+.btn-sky:active,
+.btn-sky.active,
+.open > .dropdown-toggle.btn-sky {
+  background-image: none;
+}
+.btn-sky.disabled:hover,
+.btn-sky[disabled]:hover,
+fieldset[disabled] .btn-sky:hover,
+.btn-sky.disabled:focus,
+.btn-sky[disabled]:focus,
+fieldset[disabled] .sky:focus,
+.btn-sky.disabled.focus,
+.btn-sky[disabled].focus,
+fieldset[disabled] .btn-sky.focus {
+  background-color: #29abe2;
+  border-color: #29abe2;
+}
+.btn-sky .badge {
+  color: #29abe2;
+  background-color: #fff;
+}
+/*----------------------------------- Лазурная кнопка ------------------------------------*/
+
+/*---------------------------------- Лазурная навигация ----------------------------------*/
+.navbar-sky {
+    background-color: #29abe2;
+    border-color: #29abe2;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.navbar-sky .navbar-brand {
+  color: #fff;
+}
+.navbar-sky .navbar-brand:hover,
+.navbar-sky .navbar-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+.navbar-sky .navbar-text {
+  color: #fff;
+}
+.navbar-sky .navbar-nav > li > a {
+  color: #fff;
+}
+.navbar-sky .navbar-nav > li > a:hover,
+.navbar-sky .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: #0094ff;
+}
+.navbar-sky .navbar-nav > .active > a,
+.navbar-sky .navbar-nav > .active > a:hover,
+.navbar-sky .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #e7e7e7;
+}
+.navbar-sky .navbar-nav > .disabled > a,
+.navbar-sky .navbar-nav > .disabled > a:hover,
+.navbar-sky .navbar-nav > .disabled > a:focus {
+  color: #fff;
+  background-color: transparent;
+}
+.navbar-sky .navbar-toggle {
+  border-color: #0094ff;
+}
+.navbar-sky .navbar-toggle:hover,
+.navbar-sky .navbar-toggle:focus {
+  background-color: #0094ff;
+}
+.navbar-sky .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+.navbar-sky .navbar-collapse,
+.navbar-sky .navbar-form {
+  border-color: #fff;
+}
+.navbar-sky .navbar-nav > .open > a,
+.navbar-sky .navbar-nav > .open > a:hover,
+.navbar-sky .navbar-nav > .open > a:focus {
+  color: #fff;
+  background-color: #fff;
+}
+@media (max-width: 767px) {
+  .navbar-sky .navbar-nav .open .dropdown-menu > li > a {
+    color: #fff;
+  }
+  .navbar-sky .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-sky .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #fff;
+    background-color: transparent;
+  }
+  .navbar-sky .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-sky .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-sky .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #fff;
+    background-color: #e7e7e7;
+  }
+  .navbar-sky .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-sky .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-sky .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #fff;
+    background-color: transparent;
+  }
+}
+.navbar-sky .navbar-link {
+  color: #fff;
+}
+.navbar-sky .navbar-link:hover {
+  color: #fff;
+}
+.navbar-sky .btn-link {
+  color: #fff;
+}
+.navbar-sky .btn-link:hover,
+.navbar-sky .btn-link:focus {
+  color: #fff;
+}
+.navbar-sky .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-sky .btn-link:hover,
+.navbar-sky .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-sky .btn-link:focus {
+  color: #fff;
+}
+/*---------------------------------- Лазурная навигация ----------------------------------*/
+
+/*--------------------------------------- Benefits ---------------------------------------*/
+.benefits-container
+{
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+/*--------------------------------------- Benefits ---------------------------------------*/
+
+/*--------------------------------------- Catalogue --------------------------------------*/
+.h1-container
+{
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.recomends-container
+{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.item-container
+{
+    padding: 5px; 
+}
+
+.item-table
+{
+    border-collapse: collapse;
+    border: 1px solid #cecece;
+}
+
+.item-table-td 
+{
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+    text-decoration:none;
+}
+
+.text-price
+{
+    font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 600;
+	line-height: 17px;
+    color: #7f7f7f;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.filter-container
+{
+    background-color: #f2f2f2;
+    padding-top: 20px;
+}
+.info-table-price
+{
+    font-weight:600;
+    font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 20px;
+    color: #dd381f;
+    margin-top: 0px;
+    text-align: right;
+    width:50%;
+}
+.rub
+{
+    font-weight:400;
+    font-size: 18px;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 18px;
+    color: #dd381f;
+    margin-top: 0px;
+}
+.item-img
+{
+    border: 1px solid #f2f2f2;
+    margin-bottom:10px;
+}
+.info-container
+{
+    background-color: #f2f2f2;
+    padding: 17px;
+}
+.info-table-name
+{
+    font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 600;
+	line-height: 20px;
+    color: #7f7f7f;
+    margin-top: 0px;
+    text-align: left;
+    width:50%;
+
+}
+.info-table-left
+{
+    font-size: 18px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 18px;
+    color: #7f7f7f;
+    margin-top: 0px;
+    text-align: left;
+    width:50%;
+    height: 30px;
+}
+/*--------------------------------------- Catalogue --------------------------------------*/
+
+/*---------------------------------------- Reviews ---------------------------------------*/
+.reviews-container
+{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.review-container
+{
+  width: 300px;
+  height: 160px;
+  overflow: hidden;
+  border: none;
+  background: url("review.png");
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+table {
+    width: 100%;
+}
+.review-name
+{
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 50%;
+    text-align: left;
+    color:#dd381f;
+}
+.review-date
+{
+    padding-top: 10px;
+    padding-right: 15px;
+    width: 50%;
+    text-align: right;
+}
+.review-stars
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align:center;
+}
+.review-stars-left
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    text-align:left;
+}
+.review-content
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 40px;
+    text-align:left;
+}
+/*---------------------------------------- Reviews ---------------------------------------*/
+
+/*---------------------------------------- Contacts --------------------------------------*/
+.text-title
+{
+    font-weight:600;
+    font-size: 18px;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 18px;
+    color: #7f7f7f;
+    margin-top: 0px;
+}
+.btn-contact
+{
+    margin-top: 10px;
+    width: 100%;
+}
+/*---------------------------------------- Contacts --------------------------------------*/
+
+/*---------------------------------------- Footer ----------------------------------------*/
+.text-w16
+{
+    font-weight:400;
+    font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 16px;
+    color: #ffffff;
+    margin-top: 0px;
+    text-align: left;
+}
+.footer-container
+{
+    margin-top: 10px;
+    background-color: #7f7f7f;
+    padding-top: 20px;
+}
+.sberbank
+{
+    width:130px;
+}
+/*---------------------------------------- Footer ----------------------------------------*/
+
+/*---------------------------------------nav-sidebar--------------------------------------*/
+
+/* Profile sidebar */
+.profile-sidebar {
+  /*padding: 20px 0 10px 0;*/
+  background: #fff;
+}
+
+.profile-usertitle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-usertitle-name {
+  color: #5a7391;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.profile-usertitle-job {
+  text-transform: uppercase;
+  color: #5b9bd1;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 15px;
+  margin-right: 5px;
+}
+
+.profile-userbuttons .btn:last-child {
+  margin-right: 0px;
+}
+    
+.profile-usermenu {
+  /*margin-top: 30px;*/
+}
+
+.profile-usermenu ul li {
+  border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+  color: #93a3b5;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+  background-color: #fafcfd;
+  color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+  color: #5b9bd1;
+  background-color: #f6f9fb;
+  border-left: 2px solid #5b9bd1;
+  margin-left: -2px;
+}
+
+/* Profile Content */
+.profile-content {
+  padding: 10px 0px 0px 0px;
+  background: #fff;
+}
+@media all and (min-width: 992px){
+.profile-content {
+  padding: 0px 20px 20px 20px;
+  min-height: 300px;
+}
+}
+/*---------------------------------------nav-sidebar--------------------------------------*/
+
+/*------------------------------------------lk--------------------------------------------*/
+.panel-default > .panel-heading {
+    color: #5b9bd1;
+    background-color: #f6f9fb;
+    border:none;
+}
+.panel-default {
+    border: none;
+}
+.panel {
+    box-shadow: none;
+}
+.panel-body {
+    color: #93a3b5;
+}
+/*------------------------------------------lk--------------------------------------------*/
+
+/*----------------------------------------Item_page---------------------------------------*/
+.product-info
+{
+    padding:15px 40px 15px 15px;
+}
+
+.details {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.colors {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.product-title, .price, .sizes, .colors {
+  text-transform: UPPERCASE;
+  font-weight: bold; }
+
+.checked{
+    color:#7f7f7f;
+}
+.non-checked{
+    color:#f2f2f2;
+}
+.price span {
+  color:firebrick;
+}
+
+.product-title, .rating, .product-description, .price, .vote, .sizes {
+  margin-bottom: 15px; }
+
+.product-title {
+  margin-top: 0; }
+
+.size {
+  margin-right: 10px; }
+  .size:first-of-type {
+    margin-left: 40px; }
+
+.color {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  height: 2em;
+  width: 2em;
+  border-radius: 2px; }
+  .color:first-of-type {
+    margin-left: 20px; }
+
+.not-available {
+  text-align: center;
+  line-height: 2em; }
+  .not-available:before {
+    font-family: fontawesome;
+    content: "\f00d";
+    color: #fff; }
+
+.orange {
+  background: #ff9f1a; }
+
+.green {
+  background: #85ad00; }
+
+.blue {
+  background: #0076ad; }
+
+.tooltip-inner {
+  padding: 1.3em; }
+/*----------------------------------------Item_page---------------------------------------*/
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: #f2f2f2;
+}
