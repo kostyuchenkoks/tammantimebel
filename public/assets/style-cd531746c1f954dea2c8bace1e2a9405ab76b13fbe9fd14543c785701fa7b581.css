@@ -1,0 +1,976 @@
+@charset "UTF-8";
+/*---------------------------------------- Общие ----------------------------------------*/
+/* line 3, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+body {
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+/* line 7, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.center-content {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* line 13, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 17, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.margin30 {
+  height: 30px;
+}
+
+/* line 21, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.margin20 {
+  height: 20px;
+}
+
+/* line 25, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.margin10 {
+  height: 10px;
+}
+
+/* line 30, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.empty,
+.empty:hover,
+.empty:active,
+.empty:focus,
+.empty:active:focus,
+.empty.active:focus,
+.empty:active:hover,
+.empty.active:hover,
+.empty.active:focus,
+.empty.active.focus {
+  background: none;
+  border: none;
+}
+
+/* line 44, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+button:active, button:focus {
+  outline: none !important;
+}
+
+/* line 47, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+button::-moz-focus-inner {
+  border: 0 !important;
+}
+
+/* line 50, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.color-vk {
+  color: #507299;
+}
+
+/* line 54, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.color-fb {
+  color: #4867aa;
+}
+
+/* line 58, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.color-ok {
+  color: #f58220;
+}
+
+/* line 62, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.color-gp {
+  color: #db4437;
+}
+
+/*---------------------------------------- Общие ----------------------------------------*/
+/*---------------------------------------- Текст ----------------------------------------*/
+/* line 69, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.text-phone {
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #7f7f7f;
+  margin-top: 0px;
+}
+
+/* line 79, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.text-g18 {
+  font-size: 18px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 18px;
+  color: #7f7f7f;
+  margin-top: 0px;
+}
+
+/* line 89, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.text-g16 {
+  font-size: 16px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 16px;
+  color: #7f7f7f;
+  margin-top: 0px;
+}
+
+/* line 99, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.text-g14 {
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 14px;
+  color: #7f7f7f;
+  margin-top: 0px;
+}
+
+/* line 109, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.text-sg14 {
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 14px;
+  color: #f2f2f2;
+  margin-top: 0px;
+}
+
+/* line 119, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.text-g {
+  color: #7f7f7f;
+}
+
+/* line 123, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.text-l {
+  color: #29abe2;
+}
+
+/*---------------------------------------- Текст -----------------------------------------*/
+/*---------------------------------------- Header ----------------------------------------*/
+/* line 130, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.head-container {
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+/* line 135, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.logo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 140, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.btn-head {
+  width: 140px;
+  margin-top: 10px;
+}
+
+/* line 145, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.bag-container {
+  border: 1px solid #cecece;
+  background: #fff;
+  padding: 10px;
+  height: 80px;
+  width: 210px;
+}
+
+/* line 153, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.bag-table {
+  border-collapse: collapse;
+  line-height: 1;
+}
+
+/* line 158, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.bag-table-icon {
+  padding-top: 18px;
+  padding-left: 0px;
+}
+
+/* line 163, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.bag-table-th {
+  padding-left: 10px;
+  padding-bottom: 5px;
+  text-align: left;
+  text-decoration: none;
+}
+
+/* line 170, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.bag-table-td {
+  padding-left: 10px;
+  text-align: left;
+  text-decoration: none;
+}
+
+/* line 176, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.login-container {
+  height: auto;
+  width: 100px;
+  padding-left: 0px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/*---------------------------------------- Header ----------------------------------------*/
+/*----------------------------------- Лазурная кнопка ------------------------------------*/
+/* line 187, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.btn-sky {
+  color: #fff;
+  background-color: #29abe2;
+  border-color: #29abe2;
+}
+
+/* line 192, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.btn-sky:focus,
+.btn-sky.focus {
+  color: #fff;
+  background-color: #0094ff;
+  border-color: #0094ff;
+}
+
+/* line 198, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.btn-sky:hover {
+  color: #fff;
+  background-color: #0094ff;
+  border-color: #0094ff;
+}
+
+/* line 203, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.btn-sky:active,
+.btn-sky.active,
+.open > .dropdown-toggle.btn-sky {
+  color: #fff;
+  background-color: #0094ff;
+  border-color: #0094ff;
+}
+
+/* line 210, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.btn-sky:active:hover,
+.btn-sky.active:hover,
+.open > .dropdown-toggle.btn-sky:hover,
+.btn-sky:active:focus,
+.btn-sky.active:focus,
+.open > .dropdown-toggle.btn-sky:focus,
+.btn-sky:active.focus,
+.btn-sky.active.focus,
+.open > .dropdown-toggle.sky.focus {
+  color: #fff;
+  background-color: #0074c8;
+  border-color: #0074c8;
+}
+
+/* line 223, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.btn-sky:active,
+.btn-sky.active,
+.open > .dropdown-toggle.btn-sky {
+  background-image: none;
+}
+
+/* line 228, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.btn-sky.disabled:hover,
+.btn-sky[disabled]:hover,
+fieldset[disabled] .btn-sky:hover,
+.btn-sky.disabled:focus,
+.btn-sky[disabled]:focus,
+fieldset[disabled] .sky:focus,
+.btn-sky.disabled.focus,
+.btn-sky[disabled].focus,
+fieldset[disabled] .btn-sky.focus {
+  background-color: #29abe2;
+  border-color: #29abe2;
+}
+
+/* line 240, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.btn-sky .badge {
+  color: #29abe2;
+  background-color: #fff;
+}
+
+/*----------------------------------- Лазурная кнопка ------------------------------------*/
+/*---------------------------------- Лазурная навигация ----------------------------------*/
+/* line 247, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.navbar-sky {
+  background-color: #29abe2;
+  border-color: #29abe2;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+/* line 253, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.navbar-sky .navbar-brand {
+  color: #fff;
+}
+
+/* line 256, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.navbar-sky .navbar-brand:hover,
+.navbar-sky .navbar-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+/* line 261, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.navbar-sky .navbar-text {
+  color: #fff;
+}
+
+/* line 264, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.navbar-sky .navbar-nav > li > a {
+  color: #fff;
+}
+
+/* line 267, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.navbar-sky .navbar-nav > li > a:hover,
+.navbar-sky .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: #0094ff;
+}
+
+/* line 272, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.navbar-sky .navbar-nav > .active > a,
+.navbar-sky .navbar-nav > .active > a:hover,
+.navbar-sky .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #e7e7e7;
+}
+
+/* line 278, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.navbar-sky .navbar-nav > .disabled > a,
+.navbar-sky .navbar-nav > .disabled > a:hover,
+.navbar-sky .navbar-nav > .disabled > a:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+/* line 284, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.navbar-sky .navbar-toggle {
+  border-color: #0094ff;
+}
+
+/* line 287, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.navbar-sky .navbar-toggle:hover,
+.navbar-sky .navbar-toggle:focus {
+  background-color: #0094ff;
+}
+
+/* line 291, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.navbar-sky .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+/* line 294, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.navbar-sky .navbar-collapse,
+.navbar-sky .navbar-form {
+  border-color: #fff;
+}
+
+/* line 298, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.navbar-sky .navbar-nav > .open > a,
+.navbar-sky .navbar-nav > .open > a:hover,
+.navbar-sky .navbar-nav > .open > a:focus {
+  color: #fff;
+  background-color: #0094ff;
+}
+
+@media (max-width: 767px) {
+  /* line 305, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+  .navbar-sky .navbar-nav .open .dropdown-menu > li > a {
+    color: #fff;
+  }
+
+  /* line 308, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+  .navbar-sky .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-sky .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #fff;
+    background-color: transparent;
+  }
+
+  /* line 313, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+  .navbar-sky .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-sky .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-sky .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #fff;
+    background-color: #e7e7e7;
+  }
+
+  /* line 319, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+  .navbar-sky .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-sky .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-sky .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #fff;
+    background-color: transparent;
+  }
+}
+/* line 326, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.navbar-sky .navbar-link {
+  color: #fff;
+}
+
+/* line 329, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.navbar-sky .navbar-link:hover {
+  color: #fff;
+}
+
+/* line 332, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.navbar-sky .btn-link {
+  color: #fff;
+}
+
+/* line 335, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.navbar-sky .btn-link:hover,
+.navbar-sky .btn-link:focus {
+  color: #fff;
+}
+
+/* line 339, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.navbar-sky .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-sky .btn-link:hover,
+.navbar-sky .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-sky .btn-link:focus {
+  color: #fff;
+}
+
+/*---------------------------------- Лазурная навигация ----------------------------------*/
+/*--------------------------------------- Benefits ---------------------------------------*/
+/* line 348, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.benefits-container {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-top: 30px;
+}
+
+/*--------------------------------------- Benefits ---------------------------------------*/
+/*--------------------------------------- Catalogue --------------------------------------*/
+/* line 357, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.h1-container {
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+/* line 363, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.recomends-container {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* line 369, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.item-container {
+  padding: 5px;
+}
+
+/* line 374, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.item-table {
+  border-collapse: collapse;
+  border: 1px solid #cecece;
+}
+
+/* line 380, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.item-table-td {
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  text-decoration: none;
+}
+
+/* line 389, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.text-price {
+  font-size: 17px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 600;
+  line-height: 17px;
+  color: #7f7f7f;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* line 401, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.filter-container {
+  background-color: #f2f2f2;
+  padding-top: 20px;
+}
+
+/* line 406, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.info-table-price {
+  font-weight: 600;
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 20px;
+  color: #dd381f;
+  margin-top: 0px;
+  text-align: right;
+  width: 50%;
+}
+
+/* line 418, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.rub {
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 18px;
+  color: #dd381f;
+  margin-top: 0px;
+}
+
+/* line 428, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.item-img {
+  border: 1px solid #f2f2f2;
+  margin-bottom: 10px;
+}
+
+/* line 433, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.info-container {
+  background-color: #f2f2f2;
+  padding: 17px;
+}
+
+/* line 438, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.info-table-name {
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 600;
+  line-height: 20px;
+  color: #7f7f7f;
+  margin-top: 0px;
+  text-align: left;
+  width: 50%;
+}
+
+/* line 451, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.info-table-left {
+  font-size: 18px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 18px;
+  color: #7f7f7f;
+  margin-top: 0px;
+  text-align: left;
+  width: 50%;
+  height: 30px;
+}
+
+/*--------------------------------------- Catalogue --------------------------------------*/
+/*---------------------------------------- Reviews ---------------------------------------*/
+/* line 467, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.reviews-container {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* line 472, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.review-container {
+  width: 300px;
+  height: 160px;
+  overflow: hidden;
+  border: none;
+  background: url("review.png");
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+
+/* line 488, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+table {
+  width: 100%;
+}
+
+/* line 491, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.review-name {
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 50%;
+  text-align: left;
+  color: #dd381f;
+}
+
+/* line 499, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.review-date {
+  padding-top: 10px;
+  padding-right: 15px;
+  width: 50%;
+  text-align: right;
+}
+
+/* line 506, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.review-stars {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* line 512, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.review-stars-left {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  text-align: left;
+}
+
+/* line 519, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.review-content {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 40px;
+  text-align: left;
+}
+
+/*---------------------------------------- Reviews ---------------------------------------*/
+/*---------------------------------------- Contacts --------------------------------------*/
+/* line 529, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.text-title {
+  font-weight: 600;
+  font-size: 18px;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 18px;
+  color: #7f7f7f;
+  margin-top: 0px;
+}
+
+/* line 539, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.btn-contact {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/*---------------------------------------- Contacts --------------------------------------*/
+/*---------------------------------------- Footer ----------------------------------------*/
+/* line 547, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.text-w16 {
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 16px;
+  color: #ffffff;
+  margin-top: 0px;
+  text-align: left;
+}
+
+/* line 558, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.sberbank {
+  width: 130px;
+}
+
+/*---------------------------------------- Footer ----------------------------------------*/
+/*---------------------------------------nav-sidebar--------------------------------------*/
+/* Profile sidebar */
+/* line 567, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.profile-sidebar {
+  /*padding: 20px 0 10px 0;*/
+  background: #fff;
+}
+
+/* line 572, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.profile-usertitle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* line 577, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.profile-usertitle-name {
+  color: #5a7391;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+/* line 584, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.profile-usertitle-job {
+  text-transform: uppercase;
+  color: #5b9bd1;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* line 592, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.profile-userbuttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* line 597, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.profile-userbuttons .btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 15px;
+  margin-right: 5px;
+}
+
+/* line 605, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.profile-userbuttons .btn:last-child {
+  margin-right: 0px;
+}
+
+/* line 609, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.profile-usermenu {
+  /*margin-top: 30px;*/
+}
+
+/* line 613, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.profile-usermenu ul li {
+  border-bottom: 1px solid #f0f4f7;
+}
+
+/* line 617, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.profile-usermenu ul li:last-child {
+  border-bottom: none;
+}
+
+/* line 621, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.profile-usermenu ul li a {
+  color: #93a3b5;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* line 627, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.profile-usermenu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+/* line 632, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.profile-usermenu ul li a:hover {
+  background-color: #fafcfd;
+  color: #5b9bd1;
+}
+
+/* line 637, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.profile-usermenu ul li.active {
+  border-bottom: none;
+}
+
+/* line 641, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.profile-usermenu ul li.active a {
+  color: #5b9bd1;
+  background-color: #f6f9fb;
+  border-left: 2px solid #5b9bd1;
+  margin-left: -2px;
+}
+
+/* Profile Content */
+/* line 649, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.profile-content {
+  padding: 10px 0px 0px 0px;
+  background: #fff;
+}
+
+@media all and (min-width: 992px) {
+  /* line 654, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+  .profile-content {
+    padding: 0px 20px 20px 20px;
+    min-height: 300px;
+  }
+}
+/*---------------------------------------nav-sidebar--------------------------------------*/
+/*------------------------------------------lk--------------------------------------------*/
+/* line 662, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.panel-default > .panel-heading {
+  color: #5b9bd1;
+  background-color: #f6f9fb;
+  border: none;
+}
+
+/* line 667, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.panel-default {
+  border: none;
+}
+
+/* line 670, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.panel {
+  box-shadow: none;
+}
+
+/* line 673, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.panel-body {
+  color: #93a3b5;
+}
+
+/*------------------------------------------lk--------------------------------------------*/
+/*----------------------------------------Item_page---------------------------------------*/
+/* line 679, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.product-info {
+  padding: 15px 40px 15px 15px;
+}
+
+/* line 684, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.details {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+/* line 695, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.colors {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+/* line 701, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.product-title, .price, .sizes, .colors {
+  text-transform: UPPERCASE;
+  font-weight: bold;
+}
+
+/* line 705, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.checked {
+  color: #7f7f7f;
+}
+
+/* line 708, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.non-checked {
+  color: #f2f2f2;
+}
+
+/* line 711, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.price span {
+  color: firebrick;
+}
+
+/* line 715, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.product-title, .rating, .product-description, .price, .vote, .sizes {
+  margin-bottom: 15px;
+}
+
+/* line 718, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.product-title {
+  margin-top: 0;
+}
+
+/* line 721, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.size {
+  margin-right: 10px;
+}
+
+/* line 723, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.size:first-of-type {
+  margin-left: 40px;
+}
+
+/* line 726, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.color {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  height: 2em;
+  width: 2em;
+  border-radius: 2px;
+}
+
+/* line 733, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.color:first-of-type {
+  margin-left: 20px;
+}
+
+/* line 736, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.not-available {
+  text-align: center;
+  line-height: 2em;
+}
+
+/* line 739, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.not-available:before {
+  font-family: fontawesome;
+  content: "\f00d";
+  color: #fff;
+}
+
+/* line 744, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.orange {
+  background: #ff9f1a;
+}
+
+/* line 747, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.green {
+  background: #85ad00;
+}
+
+/* line 750, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.blue {
+  background: #0076ad;
+}
+
+/* line 753, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.tooltip-inner {
+  padding: 1.3em;
+}
+
+/*----------------------------------------Item_page---------------------------------------*/
+/* line 756, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.carousel-indicators .active {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  background-color: #f2f2f2;
+}
+
+/* line 762, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+.fa-chevron-left, .fa-chevron-right {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+  margin-top: -10px;
+}
+
+/*-------------------------------------Sticky footer-------------------------------------*/
+/* line 770, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+/* line 777, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -242px;
+}
+
+/* Set the fixed height of the footer here */
+/* line 785, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+#push,
+#footer {
+  height: 242px;
+}
+
+/* line 789, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+#footer {
+  margin-top: 10px;
+  background-color: #7f7f7f;
+  padding-top: 20px;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  /* line 797, c:/Sites/tamm/app/assets/stylesheets/style.css.scss */
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+/*-------------------------------------Sticky footer-------------------------------------*/
