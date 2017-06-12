@@ -1,6 +1,18 @@
 <% provide(:title, 'Новый товар') %>
-<h1>Новый товар</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Назад', products_path %>
+<new_product>
+    <div class = "container" style = "padding:30px;">
+        <div class="panel panel-default">
+              <div class="panel-heading">
+                  <div class = "row" style = "padding: 0 20px 0 20px">
+                    Новый товар
+                    </div>
+                </div>
+            <div class="panel-body">
+                <%= render 'form' %>
+                <br>
+                <%= link_to 'Назад', products_path %>
+            </div>
+        </div>
+    </div>
+</new_product>

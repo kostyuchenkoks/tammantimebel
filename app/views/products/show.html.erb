@@ -9,7 +9,7 @@
       <!--БОЛЬШОЕ ИЗОБРАЖЕНИЕ-->
       <!--БОЛЬШОЕ ИЗОБРАЖЕНИЕ-->
       <div class = "col-lg-5 col-sm-5 col-xs-9 col-lg-offset-1" style = "padding-right:20px;">
-          <%= image_tag(@product.image_url) %>
+          <%= image_tag(@product.image_url, class:"img-responsive center-content", style:"max-height:350px;") %>
       </div>
       <!--ИНФОРМАЦИЯ/ЗАКАЗАТЬ-->
       <!--ИНФОРМАЦИЯ/ЗАКАЗАТЬ-->
@@ -18,21 +18,23 @@
       <h3 class="product-title"><%= @product.title %></h3>
       <div class="rating">
         <div class="stars">
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star non-checked"></span>
+            <!--Хитрый цикл на звездочки (темные)-->
+            <i class = "fa fa-star text-g14"></i>
+            <!--Хитрый цикл на звездочки (темные)-->
+            <!--Хитрый цикл на звездочки (светлые)-->
+            <i class = "fa fa-star text-g14" style="color:#f2f2f2;"></i>
+            <!--Хитрый цикл на звездочки (светлые)-->
         </div>
       </div>
       <p class="product-description">Классное кресло мешок для практичных натур! Прочная и невероятно практичная ткань (100% нейлон) расширяет границы использования кресла Студент.</p>
       <h4 class="price">Цена: <span><%= @product.price %> руб.</span></h4>
-      <h5 class="colors">Расцветки:
-        <span class="color orange not-available" data-toggle="tooltip" title="Нет в наличии"></span>
-        <span class="color green"></span>
-        <span class="color blue"></span>
+      <h5 class="colors">Наличие:
+          <!--Если есть-->
+          <span class = "fa fa-check"></span>
+          <!--Если нет-->
+          <!--<span class = "fa fa-times"></span>-->
       </h5>
-              <br>
+        <br>
       <div class="action">
         <%= button_to 'Добавить в корзину', line_items_path(product_id: @product), remote: true , class:'btn btn-danger', style:'min-width:200px' %>
       </div>

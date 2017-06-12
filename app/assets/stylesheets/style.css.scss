@@ -128,7 +128,7 @@ button::-moz-focus-inner {
 /*---------------------------------------- Header ----------------------------------------*/
 .head-container
 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-top: 30px;
 }
 .logo
@@ -298,7 +298,7 @@ fieldset[disabled] .btn-sky.focus {
 .navbar-sky .navbar-nav > .open > a:hover,
 .navbar-sky .navbar-nav > .open > a:focus {
   color: #fff;
-  background-color: #fff;
+  background-color: #0094ff;
 }
 @media (max-width: 767px) {
   .navbar-sky .navbar-nav .open .dropdown-menu > li > a {
@@ -346,8 +346,9 @@ fieldset[disabled] .navbar-sky .btn-link:focus {
 /*--------------------------------------- Benefits ---------------------------------------*/
 .benefits-container
 {
-    margin-bottom: 10px;
-    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-top: 30px;
 }
 /*--------------------------------------- Benefits ---------------------------------------*/
 
@@ -553,12 +554,6 @@ table {
     margin-top: 0px;
     text-align: left;
 }
-.footer-container
-{
-    margin-top: 10px;
-    background-color: #7f7f7f;
-    padding-top: 20px;
-}
 .sberbank
 {
     width:130px;
@@ -763,3 +758,46 @@ table {
     margin: 0;
     background-color: #f2f2f2;
 }
+.fa-chevron-left, .fa-chevron-right {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    margin-top: -10px;
+}
+/*-------------------------------------Sticky footer-------------------------------------*/
+  html,
+  body {
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+  }
+
+  /* Wrapper for page content to push down footer */
+  #wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -242px;
+  }
+
+  /* Set the fixed height of the footer here */
+  #push,
+  #footer {
+    height: 242px;
+  }
+  #footer {
+    margin-top: 10px;
+    background-color: #7f7f7f;
+    padding-top: 20px;
+  }
+
+  /* Lastly, apply responsive CSS fixes as necessary */
+  @media (max-width: 767px) {
+    #footer {
+      margin-left: -20px;
+      margin-right: -20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+/*-------------------------------------Sticky footer-------------------------------------*/

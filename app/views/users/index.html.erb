@@ -1,10 +1,21 @@
 <% provide(:title, 'Все пользователи') %>
-<h1>Все пользователи</h1>
+<all_users>
+    <div class = "container" style = "padding:30px;">
+        <div class="panel panel-default">
+              <div class="panel-heading">
+                  <div class = "row" style = "padding: 0 20px 0 20px">
+                    Пользователи
+                    </div>
+                </div>
+            <div class="panel-body">
+                <%= will_paginate %>
 
-<%= will_paginate %>
+                <ul class="users">
+                    <%= render @users %>
+                </ul>
 
-<ul class="users">
-	<%= render @users %>
-</ul>
-
-<%= will_paginate %>
+                <%= will_paginate %>
+            </div>
+        </div>
+    </div>
+</all_users>

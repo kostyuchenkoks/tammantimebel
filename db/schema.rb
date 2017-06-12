@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170612093032) do
+ActiveRecord::Schema.define(version: 20170612120223) do
+
+  create_table "accounts", force: :cascade do |t|
+    t.string   "uid"
+    t.string   "provider"
+    t.string   "email"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "accounts", ["user_id"], name: "index_accounts_on_user_id"
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false

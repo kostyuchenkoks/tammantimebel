@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'products' => 'products#index'
   get 'password_resets/new'
   get 'password_resets/edit'
+
+  get 'auth/vkontakte/callback' => 'omniauth#create'
   
   resources :products
   resources :carts

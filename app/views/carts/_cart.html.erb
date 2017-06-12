@@ -1,14 +1,39 @@
-<% unless cart.line_items.empty? %>
-<table>
-  <%= render(@cart.line_items) %>
-
-  <tr class="total_line">
-    <td colspan="2">Total</td>
-    <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
-  </tr>
-</table>
-
-<%= button_to "Checkout", new_order_path, method: :get %>
-<%= button_to 'Empty cart', @cart, method: :delete,
-    data: { confirm: 'Are you sure?' } %>
-<% end %>
+<cart>
+    <div class = "container" style = "padding:30px;">
+        <div class="panel panel-default">
+              <div class="panel-heading">
+                  <div class = "row" style = "padding: 0 20px 0 20px">
+                    Корзина
+                    </div>
+                </div>
+         <div class="panel-body">
+        <% unless cart.line_items.empty? %>
+        <table class="table-bordered table-striped table">
+            <tr>
+                <th>Название</th>
+                <th>Количество, шт</th>
+                <th>Удалить</th>
+                <th>Стомость, руб.</th>
+            </tr>
+            <%= render(@cart.line_items) %>
+            <tr>
+                <td colspan="3">Общая стоимость, руб.:</td>
+                <td><%= number_to_currency(@cart.total_price) %></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th style="width:70%;"></th>
+                <th>
+                    <%= button_to "Перейти к оформлению заказа", new_order_path, method: :get, class:"btn btn-sky checkout" %>
+                </th>
+                <th >
+                    <%= button_to 'Очистить корзину', @cart, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-default checkout" %>
+                </th>
+            </tr>
+        </table>
+        <% end %>
+    </div>
+        </div>
+    </div>
+</cart>

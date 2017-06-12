@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :password, length: { minimum: 6 }, allow_blank: true
 
+  has_many :accounts, dependent: :destroy
+
   class << self
   # Возвращает хэш - дайджест для указанной строки.
   def digest(string)
