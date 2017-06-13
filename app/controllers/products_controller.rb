@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  include CurrentCart
+  include CurrentCart 
   before_action :set_cart
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :admin_user, only: [:index, :new, :edit, :destroy]

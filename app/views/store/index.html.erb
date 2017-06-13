@@ -5,6 +5,7 @@
 <% end %>
 
 <items>
+<<<<<<< HEAD
     <div class = "container" style = "padding-top:20px;padding-bottom:20px;">
         <div class = "row">
             <div class = "col-lg-3 col-md-3">
@@ -51,4 +52,52 @@
             </div>
         </div>
     </div> 
+=======
+  <div class = "container" style = "padding-top:20px;padding-bottom:20px;">
+    <div class = "row">
+      <div class = "col-lg-3 col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li role="presentation"><a href="#">Кресла лайт</a></li>
+            <li role="presentation"><a href="#">Кресла Фэмили</a></li>
+            <li role="presentation"><a href="#">Кресла FLAGMAN & ELIT</a></li>
+          <li role="presentation"><a href="#">Кресла и диваны I-Q</a></li>
+          <li role="presentation"><a href="#">Аксессуары</a></li>
+        </ul>
+      </div>
+      <div class = "col-lg-8 col-lg-offset-1 col-md-9 col-sm-12 col-xs-12">
+        <% @products.each_slice(4) do |product| %>
+        <div class = "row">
+          <% product.each do |product| %>
+          <div class = "col-lg-3 col-md-3 col-sm-4 col-xs-6 item-container">
+            <table>
+              <tr>
+                <td colspan = "2" class = "item-table">
+                  <a href = <%= product_path(product) %>>
+                    <%= image_tag(product.image_url, class:"img-responsive") %>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class = "item-table text-g14 item-table-td">
+                  <a href = <%= product_path(product) %>><%= product.title %></a>
+                </td>
+                <td rowspan = "2" class = "item-table center-content">
+                  <%= button_to '+', line_items_path(product_id: product), remote: true , class:'btn btn-primary', style:'min-width:40px'%>
+                </td>
+              </tr>
+              <tr>
+                <td class = "item-table text-g14 item-table-td">Размер: 100x100 см</td>
+              </tr>
+              <tr>
+                <td colspan = "2" class = "text-price"><%= number_to_currency(product.price) %></td>
+              </tr>
+            </table>
+          </div>
+          <% end %> 
+        </div>
+        <% end %> 
+      </div>
+    </div>
+  </div> 
+>>>>>>> social-networks
 </items>
