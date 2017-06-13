@@ -35,16 +35,15 @@
                     <br>
                     <%= form_for(:session, url: login_path) do |f| %>
    	  
-                      <%= f.label :email %>
-                      <%= f.email_field :email, class: 'form-control' %>
+                      
+                      <%= f.email_field :email, class: 'form-control', placeholder: 'Имя' %>
                         <br>
-                      <%= f.label :password %>
                       <%= link_to "(забыли пароль)", new_password_reset_path %>
-                      <%= f.password_field :password, class: 'form-control' %>
+                      <%= f.password_field :password, class: 'form-control', placeholder: 'Пароль' %>
 
                       <%= f.label :remember_me, class: "checkbox inline", style:"padding-left:20px;"  do %>
                         <%= f.check_box :remember_me %>
-                        <span>Remember me on this computer</span>
+                        <span>запомнить меня на этом компьютере</span>
                       <% end %>
                         <br>
                       <%= f.submit "Войти", class: "btn btn-danger", style:"width:100%" %>

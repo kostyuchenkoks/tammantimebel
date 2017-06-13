@@ -21,3 +21,10 @@
 
 en:
   hello: "Hello world"
+
+en:
+  errors:
+    zero: en_zero
+    one: en_one
+    few: en_few
+    other: en_other

@@ -1,28 +1,24 @@
 <% provide(:title, 'Зарегистрироваться') %>
 
 <registration>
-        <div class = "container" style = "padding:30px;">
-            <div class = "row">
-                <div class = "col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                     <p class = "text-g16 center-content">Регистрация</p>
-                        <%= form_for(@user) do |f| %>
-                          <%= render 'shared/error_messages' %>
-                    
-                          <%= f.label :name %>
-                          <%= f.text_field :name, class: 'form-control' %>
-                        <br>
-                          <%= f.label :email %>
-                          <%= f.email_field :email, class: 'form-control' %>
-                        <br>
-                          <%= f.label :password %>
-                          <%= f.password_field :password, class: 'form-control' %>
-                        <br>
-                          <%= f.label :password_confirmation, "Confirmation" %>
-                          <%= f.password_field :password_confirmation, class: 'form-control' %>
-                            <br>
-                          <%= f.submit "Создать аккаунт", class: "btn btn-danger", style:"width:100%;" %>
-                        <% end %>
-                </div>
-            </div>
-        </div>
-    </registration>
+  <div class = "container" style = "padding:30px;">
+      <div class = "row">
+          <div class = "col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+               <p class = "text-g16 center-content">Регистрация</p>
+                  <%= form_for(@user) do |f| %>
+                    <%= render 'shared/error_messages' %>
+                   <br>
+                    <%= f.text_field :name, class: 'form-control', placeholder: 'Имя' %>
+                  <br>
+                    <%= f.email_field :email, class: 'form-control', placeholder: 'Email'%>
+                  <br>
+                    <%= f.password_field :password, class: 'form-control', placeholder: 'Пароль'%>
+                  <br>
+                    <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Повторите пароль'%>
+                      <br>
+                    <%= f.submit "Зарегистрироваться", class: "btn btn-danger", style:"width:100%;" %>
+                  <% end %>
+          </div>
+      </div>
+  </div>
+</registration>

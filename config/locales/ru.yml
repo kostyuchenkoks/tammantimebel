@@ -1,0 +1,39 @@
+ru:
+  error:
+    zero: "ошибок"
+    one: "ошибка"
+    few: "ошибок"
+    other: "ошибки"
+
+  shared:
+    error_messages: 
+      error: "ошибка"
+
+  number:
+    currency:
+      format:
+        unit: "руб."
+        precision: 0
+        separator: "."
+        delimiter: " "
+        format: "%n&nbsp;%u"
+
+  model:
+    user:
+      name: "Имя"
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: 'не может быть пустым'
+            email:
+              blank: 'не может быть пустым'
+              invalid: 'некорректен'              
+            password:
+              blank: 'не может быть пустым'
+              too_short: 'не может быть меньше 6 чимволов'
+            password_confirmation:
+              confirmation: 'пароли не совпадают'
