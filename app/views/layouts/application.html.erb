@@ -10,14 +10,15 @@
     <%= render 'layouts/shim' %>
   </head>
   <body>
-  	<%= render 'layouts/header' %>
-    <%= render 'layouts/subtitle' %>
-    <div class="container">
       <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
-      <%= yield %>
+      <div id="wrap">
+        <%= render 'layouts/header' %>
+        <%= render 'layouts/subtitle' %>
+        <%= yield %>
+        <div id="push"></div>
+      </div>
       <%= render 'layouts/footer' %>
-    </div>
   </body>
 </html>

@@ -1,3 +1,118 @@
-<div class="center jumbotron">
-  <h1>Добро пожаловать в Tammantimebel</h1>
-</div>
+<%= render 'layouts/slider' %>
+<%= render 'layouts/benefits' %>
+
+<recomends>
+    <div class = "container">
+        <div class = "row h1-container">
+            <div class = "col-lg-4"></div>
+            <div class = "col-lg-4 center-content">
+                <p class = "text-g18">РЕКОМЕНДУЕМЫЙ ТОВАР</p>
+            </div>
+            <div class = "col-lg-4"></div>
+        </div>
+        <!--Цикл 1-->
+        <div class = "row recomends-container">
+            <!--Цикл 2-->
+            <div class = "col-lg-2 col-md-3 col-sm-4 col-xs-6 col-lg-offset-1 item-container">
+                <table>
+                    <tr>
+                        <td colspan = "2" class = "item-table"><img src="img/item.jpg" class="img-responsive"></td>
+                    </tr>
+                    <tr>
+                        <td class = "item-table text-g14 item-table-td">Кресло-мешок Студент</td>
+                        <td rowspan = "2" class = "item-table center-content">
+                            <a href = "#">
+                                <i class="fa fa-cart-arrow-down fa-2x text-g"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class = "item-table text-g14 item-table-td">Размер: 100x100 см</td>
+                    </tr>
+                    <tr>
+                        <td colspan = "2" class = "text-price">2 000р.</td>
+                    </tr>
+                </table>
+            </div>
+            <!--Цикл 2-->
+        </div>
+        <!--Цикл 1-->
+    </div>
+</recomends>
+
+<reviews>
+   <div class = "container">
+       <div class = "row h1-container">
+            <div class = "col-lg-5"></div>
+            <div class = "col-lg-2 center-content">
+                <p class = "text-g18">ОТЗЫВЫ</p>
+            </div>
+            <div class = "col-lg-5"></div>
+        </div>
+       <!--Цикл 1-->
+        <div class = "row reviews-container">
+            <!--Цикл 2-->
+            <div class = "col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class = "review-container center-content">
+                    <table calss = "review-table">
+                        <tr>
+                            <td class = "text-g16 review-name">Ирина Сергеева</td>
+                            <td class = "text-g16 review-date">29.05.2017</td>
+                        </tr>
+                        <tr>
+                            <td colspan = "2" class = "text-g14 review-stars">
+                                <!--Хитрый цикл на звездочки (темные)-->
+                                <i class = "fa fa-star text-g14"></i>
+                                <!--Хитрый цикл на звездочки (темные)-->
+                                <!--Хитрый цикл на звездочки (светлые)-->
+                                <i class = "fa fa-star text-g14" style="color:#f2f2f2;"></i>
+                                <!--Хитрый цикл на звездочки (светлые)-->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan = "2" class = "text-g16 review-content">Спасибо за замечательное кресло! Не совсем то, что ожидалось, но детям очень понравилось!</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!--Цикл 2-->
+        </div>
+       <!--Цикл 1-->
+    </div> 
+</reviews>
+
+<p><a name="contacts"></a></p>
+<contacts>
+    <div class = "container">
+       <div class = "row h1-container">
+            <div class = "col-lg-5"></div>
+            <div class = "col-lg-2 center-content">
+                <p class = "text-g18">НАШИ КОНТАКТЫ</p>
+            </div>
+            <div class = "col-lg-5"></div>
+        </div>
+        <div class = "row">
+            <div class = "col-lg-8 col-md-8 col-sm-12 hidden-xs center-content">
+                <a class="dg-widget-link" href="http://2gis.ru/bratsk/firm/7178140187133344/center/101.645991,56.152377/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Братска</a>
+                <div class="dg-widget-link">
+                    <a href="http://2gis.ru/bratsk/center/101.645991,56.152377/zoom/16/routeTab/rsType/bus/to/101.645991,56.152377╎Москва, торговый центр?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Москва, торговый центр</a>
+                </div>
+                <script charset="utf-8" src="http://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+                <script charset="utf-8">new DGWidgetLoader({"width":640,"height":400,"borderColor":"#a3a3a3","pos":{"lat":56.152377,"lon":101.645991,"zoom":16},"opt":{"city":"bratsk"},"org":[{"id":"7178140187133344"}]});</script>
+            </div>
+            <div class = "col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <p class = "text-title">Адрес:</p>
+                <p class = "text-g18">г.Братск, ул.Маршала Жукова 7, ТЦ "Москва" (0 этаж)</p>
+                <br>
+                <p class = "text-title">Время работы:</p>
+                <p class = "text-g18">с 10:00 до 20:00, Без выходных</p>
+                <br>
+                <p class = "text-title">Телефон:</p>
+                <p class = "text-g18">+7 (982) 621-78-86</p>
+                <br>
+                <input type="text" class="form-control" id="telephone" placeholder="Ваш номер телефона">
+                <a href = "#" class = "btn btn-sky btn-contact">ЗАКАЗАТЬ ЗВОНОК</a>
+            </div>
+        </div>
+    </div>
+</contacts>

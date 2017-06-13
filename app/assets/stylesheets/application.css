@@ -12,5 +12,6 @@
 * раздела стилей лучше создать новый файл.
 *
 *= require_self
+*= require font-awesome
 *= require_tree .
 */

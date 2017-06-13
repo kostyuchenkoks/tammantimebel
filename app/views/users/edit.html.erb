@@ -28,51 +28,78 @@
     </div>
     <div class="col-md-9 col-sm-12 col-xs-12" style="padding:0px;">
       <div class="profile-content">
-         <div class="panel panel-default">
-            <div class="panel-heading">
-              <%= render 'shared/error_messages' %>
+        <div class="panel panel-default">
+          <div class="panel-heading">
               <div class = "row" style = "padding: 0 20px 0 10px">
-                Редактирование информации
-                  <a href="javascript:showhide('profile-inf-show', 'profile-inf-change')">
+                Настройки аккаунта
+                 <a href="javascript:showhide('akk-inf-show', 'akk-inf-change')">
                     <i class="fa fa-pencil pull-right"></i>
-                  </a>
-              </div>
+                </a>
+                </div>
             </div>
-
-            <%= form_for(@user) do |f| %>
-            <%= render 'shared/error_messages' %>
-            
-            <%= f.label :last_name, "Фамилия"%>
-            <%= f.text_field :last_name, class: 'form-control' %>
-            
-            <%= f.label :name, "Имя" %>
-            <%= f.text_field :name, class: 'form-control' %>
-            
-            <%= f.label :middle_name, "Отчество"%>
-            <%= f.text_field :middle_name, class: 'form-control' %>
-            
-            <%= f.label :email %>
-            <%= f.text_field :email, class: 'form-control' %>
-            
-            <%= f.label :phone, "Телефон"%>
-            <%= f.text_field :phone, class: 'form-control' %>
-            
-            <%= f.label :city, "Город"%>
-            <%= f.text_field :city, class: 'form-control' %>
-            
-            <%= f.label :address, "Адрес"%>
-            <%= f.text_field :address, class: 'form-control' %>
-            
-            <%= f.label :password, "Пароль"%>
-            <%= f.password_field :password, class: 'form-control' %>
-            
-            <%= f.label :password_confirmation, "Подтверждение пароля"%>
-            <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-            <%= f.submit "Сохранить изменения", class: "btn btn-primary" %>
-            <% end %>       
+              <div class="panel-body" id = "akk-inf-show">
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                      <label class="col-lg-2 control-label">Email:</label>
+                      <div class="col-lg-10" style="padding-top:7px;">
+                        ex@mail.ru
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-2 control-label">Пароль:</label>
+                      <div class="col-lg-10" style="padding-top:7px;">
+                        *****
+                      </div>
+                    </div>
+                  </form>
+              </div>
+              <div class="panel-body" id = "akk-inf-change" style = "display:none;">
+                  <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                      <label class="col-lg-2 control-label">Логин:</label>
+                      <div class="col-lg-10">
+                        <input class="form-control" value="Логин" type="text">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-2 control-label">Пароль:</label>
+                      <div class="col-lg-10">
+                        <input class="form-control" value="Пароль" type="text">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-2 control-label">Подтвердите пароль:</label>
+                      <div class="col-lg-10">
+                        <input class="form-control" value="Повторите пароль" type="text">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="pull-right" style= "padding-left:15px;padding-right:15px;">
+                        <input class="btn btn-sky" value="Сохранить изменения" type="button">
+                        <span></span>
+                        <input class="btn btn-default" value="Отменить" type="reset">
+                      </div>
+                    </div>
+                  </form>
+              </div>
         </div>
       </div>
     </div>
   </div> 
-</div>      
+</div>
+<script type="text/javascript">
+    function showhide(id_hide, id_show) {
+        var e = document.getElementById(id_hide);
+        var s = document.getElementById(id_show);
+        if (e.style.display === 'none') 
+        {
+            e.style.display = 'block';
+            s.style.display = 'none';
+        } 
+        else 
+        {
+            e.style.display = 'none';
+            s.style.display = 'block';
+        }
+     }
+</script>
